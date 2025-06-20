@@ -15,7 +15,7 @@ class GestioneFinanze {
 
         this.#components.debtsList.innerHTML = debts.length
             ? debts.map(this.#createItemHTML).join('')
-            : `<p class="text-muted">Nessun debito aggiunto.</p>`;
+            : `<p class="text-muted">Nessun finanziamento aggiunto.</p>`;
 
         this.#components.servicesList.innerHTML = services.length
             ? services.map(this.#createItemHTML).join('')
@@ -96,7 +96,7 @@ class GestioneFinanze {
             }
 
             if (type === 'debt' && (isNaN(totalRates) || !dueDate)) {
-                alert('Per i debiti, inserisci numero rate e data di scadenza.');
+                alert('Per i finanziamenti, inserisci numero rate e data di scadenza.');
                 return;
             }
 
